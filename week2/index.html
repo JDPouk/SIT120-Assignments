@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+        The Start of something
+        </title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            h1{
+                color: red;
+            }
+        </style>
+    </head>
+    <div id="nav">
+        <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Products</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Login</a></li>
+        </ul>
+    </div>
+    <body>
+        <h1>
+            Testing Media Features for pointer and hover
+          </h1>
+          <p>
+            View this demo using different devices.
+          </p>
+          <div class="desc"></div>
+        <h1>
+            This is looking good
+        </h1>
+        <h2>small writing</h2>
+        <h3 id="header3">smaller writing</h3>
+        <p style="color:red;">smallest writing</p>
+
+    
+        <!╌ coment here ╌> 
+
+        <button id="btn" onclick="showAlert()   "> New button</button>
+
+        <script>
+            function showAlert()
+            {
+                alert("This button is working")
+                var heading3 = document.getElementById("heading3");
+                heading3.style.color = "red";
+            }
+        </script>
+        <div id="app">
+            <!-- check the data -->
+            <div v-for="todo in todos" :key="todo.title" :style="{ textDecoration: todo.checked? 'line-through':'none' }">
+                <input type="checkbox" v-model="todo.checked"/>
+                {{ todo.title }}
+            </div>
+        </div>
+    </body>
+    <footer>
+
+    </footer>
+</html>
+<script src="./todo.js"></script>
