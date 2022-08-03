@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+        The Start of something
+        </title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="topnav">
+      <a class="active" href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+      <div class="search-container">
+        <form action="/action_page.php">
+          <input type="text" placeholder="Search.." name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+          <template>
+            <input type="text" v-model="input" placeholder="Search fruits..." />
+           <div class="item fruit" v-for="fruit in filteredList()" :key="fruit">
+             <p>{{ fruit }}</p>
+           </div>
+           <div class="item error" v-if="input&&!filteredList().length">
+              <p>No results found!</p>
+           </div>
+         </template>
+        </form>
+      </div>
+    </div>
+    <body>
+      <div class="flex-container">
+        <div id="flex-item-left" >
+          <h2 id="jumpAnchor0">Australian income tax calculator</h2><h3>Your income</h3>
+          <p>
+          <label for="grossIncome">Employment income: <span>(after salary sacrifice, before tax)</span></label>
+          <input type="text" inputmode="numeric" id="grossIncome" class="dollars" value="0">
+          <label for="grossIncomeFreq" class="offScreen">Employment income frequency</label>
+          <select id="grossIncomeFreq" class="freq">
+          <option value="1">Annually</option>
+          <option value="12">Monthly</option>
+          <option value="26">Fortnightly</option>
+          <option value="52">Weekly</option>
+          </select>
+          </p>
+          <p>
+          <label for="otherIncome">Other taxable income:</label>
+          <input type="text" inputmode="numeric" id="otherIncome" class="dollars" value="0">
+          <label for="otherIncomeFreq" class="offScreen">Other taxable income frequency</label>
+          <select id="otherIncomeFreq" class="freq">
+          <option value="1">Annually</option>
+          <option value="12">Monthly</option>
+           <option value="26">Fortnightly</option>
+          <option value="52">Weekly</option>
+          </select></p>
+          <p>
+          <label for="fy">Financial year:</label>
+          <select id="fy">
+          <option value="2016-2017">2016-2017</option>
+          <option value="2017-2018">2017-2018</option>
+          <option value="2018-2019">2018-2019</option>
+          <option value="2019-2020">2019-2020</option>
+          <option value="2020-2021">2020-2021 pre budget*</option>
+          <option value="2020-20211">2020-2021</option>
+          <option value="2021-2022">2021-2022</option>
+          <option value="2022-2023" selected="">2022-2023</option>
+          </select>
+          </p>
+          <p class="col100 hide">
+          <button id="btnCalculate">Calculate</button>
+          </p>
+          </div>  
+          <div id="incomeTaxResultsContainer" >
+            <div id="calc_box_top">
+            <p >Enter an income to view the result</p>
+            </div>
+          </div>
+
+      </div>
+
+    </body>
+    <footer>
+    </footer>
+</html>
+<script src="./script.js"></script>
+<script setup>
+  import { ref } from "vue";
+  let input = ref("");
+  const fruits = ["apple", "banana", "orange"];
+  function filteredList() {
+    return fruits.filter((fruit) =>
+      fruit.toLowerCase().includes(input.value.toLowerCase())
+    );
+  }
+  </script>
