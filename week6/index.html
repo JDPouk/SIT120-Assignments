@@ -20,7 +20,7 @@
         type="password" 
         placeholder="Please enter your passord" />
       </div>
-
+      
       <div id="app-2">
         <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
         <label for="jack">Jack</label>
@@ -32,6 +32,15 @@
         <span>Checked names: {{ checkedNames }}</span>
       </div>
 
+      <div id="app-3">
+        <select v-model="selected">
+          <option v-for="option in options" v-bind:value="option.value">
+            {{ option.text }}
+          </option>
+        </select>
+        <span>Selected: {{ selected }}</span>
+      </div>
+      
     </body>
     <footer>
     </footer>
