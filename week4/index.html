@@ -20,7 +20,19 @@
         <span v-if="seen">Now you see me</span>
       </div>
 
-      
+      <h1 v-if="awesome">Vue is awesome!</h1>
+      <h1 v-else>Oh no 😢</h1>
+
+      <h1 v-show="ok">Hello!</h1>
+
+      <div id="app-4">
+        <ol>
+          <li v-for="todo in todos">
+            {{ todo.text }}
+          </li>
+        </ol>
+      </div>
+
     </body>
     <footer>
     </footer>
