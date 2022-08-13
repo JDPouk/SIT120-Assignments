@@ -1,14 +1,26 @@
-html, body, #app {
+html, body {
     height: 100%;
     margin: 0;
   }
   
   #app {
-
-    
     display: flex;
     flex-direction: column;
+    height: 25%;
   }
+
+  #app-2 {
+    display: flex;
+    flex-direction: column;
+    height: 25%;
+  }
+
+  #app-3 {
+    display: flex;
+    flex-direction: column;
+    height: 25%;  
+  }
+
   .wrapper {
     flex: 1 0 auto;
   }

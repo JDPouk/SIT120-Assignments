@@ -6,3 +6,11 @@ var app = new Vue({
       password: "password123",
     }
   });
+
+var app2 = new Vue({
+  el: '#app-2',
+  data: {
+    checkedNames: []
+  }
+})
+
