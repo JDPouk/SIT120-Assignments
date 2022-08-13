@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head> 
+    <body>
+      <div id="app">
+        <p>User name</p>
+        <input 
+        v-model="name"
+        type="text" 
+        placeholder="Please enter your User name" />
+        <p>password</p>
+        <input 
+        v-model="password" 
+        type="password" 
+        placeholder="Please enter your passord" />
+      </div>
+    </body>
+    <footer>
+    </footer>
+</html>
+<script src="./script.js"></script>
