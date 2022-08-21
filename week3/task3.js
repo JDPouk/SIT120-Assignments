@@ -11,5 +11,5 @@ console.log(now.getFullYear());
 let newDate = new Date();
 setTimeout(() => {
     newDate = Date.now()
-    console.log(firstDate);
+    console.log(newDate);
 }, 1000);
