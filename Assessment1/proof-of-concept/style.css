@@ -184,4 +184,8 @@ body {
   padding: 2px 16px;
 }
 
-
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 25%;
+}

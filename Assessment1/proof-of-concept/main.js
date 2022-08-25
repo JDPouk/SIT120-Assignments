@@ -1,6 +1,9 @@
 var app = new Vue({
     el: '#app',
     data: {
-      message: 'You loaded this page on ' + new Date().toLocaleString()
+      message: 'Hello Vue!',
+      firstName: 'sam',
+      email: "Testing@testmail.com",
+      lastName: "word123",
     }
-  })
+  });

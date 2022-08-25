@@ -24,9 +24,26 @@
       </div>
     </div>
     <div id="app">
-      <span v-bind:title="message">
-        The new value will be!
-      </span>
+      <p>First Name</p>
+      <input 
+      v-model="firstName"
+      type="text" 
+      placeholder="Please enter your First Name" />
+      <p>Last Name</p>
+      <input 
+      v-model="lastName"
+      type="text" 
+      placeholder="Please enter your Last Name" />
+      <p>Email</p>
+      <input 
+      v-model="email" 
+      type="text"  
+      placeholder="Please enter your email" />
+      <p>Message</p>
+      <input 
+      v-model="message" 
+      type="text" 
+      placeholder="Please enter your message" />
     </div>
     <body>
     </body>
