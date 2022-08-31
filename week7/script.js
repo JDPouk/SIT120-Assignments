@@ -9,12 +9,6 @@ Vue.component('button-counter', {
 
 new Vue({ el: '#components-demo' })
 
-new Vue({
-  el: '#app',
-  components: {
-    'component-a': ComponentA
-  }
-})
 
 let taskComponent = {
   template: `<li><slot></slot></li>`
