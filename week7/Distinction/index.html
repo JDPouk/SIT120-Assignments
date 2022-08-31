@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head> 
+    <body>
+      <div id="props-demo">
+      <template>
+        <names>Hi {{ firstName }} {{ lastName }}</names>
+      </template>
+    </div> 
+
+      
+      <base-layout>
+        <template v-slot:header>
+          <h1>Here might be a page title</h1>
+        </template>
+
+        <p>A paragraph for the main content.</p>
+        <p>And another one.</p>
+
+        <template v-slot:footer>
+          <p>Here's some contact info</p>
+        </template>
+    </base-layout>
+        
+      
+    </body>
+    <footer>
+    </footer>
+</html>
+<script src="./script.js"></script>
