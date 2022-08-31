@@ -23,31 +23,44 @@
         </form>
       </div>
     </div>
-    <div id="app">
-      <p>First Name</p>
-      <input 
-      v-model="firstName"
-      type="text" 
-      placeholder="Please enter your First Name" />
-      <p>Last Name</p>
-      <input 
-      v-model="lastName"
-      type="text" 
-      placeholder="Please enter your Last Name" />
-      <p>Email</p>
-      <input 
-      v-model="email" 
-      type="text"  
-      placeholder="Please enter your email" />
-      <p>Message</p>
-      <input 
-      v-model="message" 
-      type="text" 
-      placeholder="Please enter your message" />
-    </div>
     <body>
-    </body>
+      <base-layout>
 
+      <h1>Contact Us</h1>
+
+      <template v-slot:footer>
+        <p>Here's some contact info</p>
+      </template>
+  </base-layout>
+  
+      <div id="app">
+        <p>First Name</p>
+        <input 
+        v-model="firstName"
+        type="text" 
+        placeholder="Please enter your First Name" />
+        <p>Last Name</p>
+        <input 
+        v-model="lastName"
+        type="text" 
+        placeholder="Please enter your Last Name" />
+        <p>Email</p>
+        <input 
+        v-model="email" 
+        type="text"  
+        placeholder="Please enter your email" />
+        <p>Message</p>
+        <input 
+        v-model="message" 
+        type="text" 
+        placeholder="Please enter your message" />
+      </div>
+
+      <div id="components-demo">
+        <button-counter></button-counter>
+      </div>
+
+    </body>
 
     <footer>
     </footer>
