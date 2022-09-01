@@ -10,25 +10,25 @@ Vue.component('button-counter', {
 new Vue({ el: '#components-demo' })
 
 
-let taskComponent = {
+let propComponent = {
   template: `<li><slot></slot></li>`
 };
 
-let taskListComponent = {
-  template: `<div class="task-list">
-              <h3>List Of Tasks</h3>
+let propListComponent = {
+  template: `<div class="prop-list">
+              <h3>List Of props</h3>
               <ul>
-                  <task v-for="task in tasks">{{task}}</task>
+                  <prop v-for="prop in props">{{prop}}</prop>
               </ul>
              </div>`,
   
   components: {
-      'task' : taskComponent
+      'prop' : propComponent
   },
 
   data(){
       return{
-          tasks : ['Go to Work', 'Eat Lunch', 'Go for a Run', 'Clean House']
+        props: ['Work', 'Lunch', 'Run', 'Clean']
       }
   }
 };
@@ -38,6 +38,6 @@ let app = new Vue({
 el: '#app',
 
 components: {
-  'task-list' : taskListComponent
+  'prop-list' : propListComponent
 }
 });
