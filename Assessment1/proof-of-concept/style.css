@@ -204,7 +204,7 @@ body {
 
 .card-list {
   display: flex;
-  padding-left: 25%;
+  float:inline-start;
   padding-top: 10%;
 }
 

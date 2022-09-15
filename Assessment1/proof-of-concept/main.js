@@ -7,3 +7,11 @@ var app = new Vue({
       lastName: "word123",
     }
   });
+
+  export default {
+    data() {
+      return {
+        sent: true
+      }
+    }
+  }
