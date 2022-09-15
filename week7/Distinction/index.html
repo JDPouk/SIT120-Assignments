@@ -6,13 +6,12 @@
         <link rel="stylesheet" href="style.css">
     </head> 
     <body>
-      <div id="props-demo">
-      <template>
-        <names>Hi {{ firstName }} {{ lastName }}</names>
-      </template>
-    </div> 
-
       
+      <div id="app">
+          <base-textbox v-model="box"> 
+        </base-textbox>
+      </div>
+
       <base-layout>
         <template v-slot:header>
           <h1>Here might be a page title</h1>
