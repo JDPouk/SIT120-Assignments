@@ -24,36 +24,35 @@
       </div>
     </div>
     <body>
-      <base-layout>
 
-      <h1>Contact Us</h1>
-
-      <template v-slot:footer>
-        <p>Here's some contact info</p>
-      </template>
-  </base-layout>
   
       <div id="app">
-        <p>First Name</p>
+
+        <h1>Contact Us</h1>
+
+        <label for="First Name">First Name</label>
         <input 
         v-model="firstName"
         type="text" 
         placeholder="Please enter your First Name" />
-        <p>Last Name</p>
+        <label for="Last Name">Last Name</label>
+
         <input 
         v-model="lastName"
         type="text" 
         placeholder="Please enter your Last Name" />
-        <p>Email</p>
+        <label for="Email">Email</label>
+
         <input 
         v-model="email" 
         type="text"  
         placeholder="Please enter your email" />
-        <p>Message</p>
-        <input 
-        v-model="message" 
-        type="text" 
-        placeholder="Please enter your message" />
+
+        <label for="Message">Message</label>
+        <textarea v-model="message" type="textarea" id="subject" name="subject" placeholder="Please enter your message" style="height:200px"></textarea>
+    
+        <input type="submit" value="Submit">
+
       </div>
 
       <div id="components-demo">
