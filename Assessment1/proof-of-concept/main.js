@@ -1,17 +1,18 @@
-var app = new Vue({
+let vue = new Vue({
+  el: '#app2',
+  data: {
+    message: 0
+  }
+})
+
+ new Vue({
     el: '#app',
     data: {
-      message: 'Hello Vue!',
-      firstName: 'sam',
-      email: "Testing@testmail.com",
-      lastName: "word123",
+        todos: [
+            { title: 'assignment1', checked: true },
+            { title: 'assignment2', checked: false },
+            { title: 'assignment3', checked: false },
+        ]
     }
-  });
+})
 
-  export default {
-    data() {
-      return {
-        sent: true
-      }
-    }
-  }

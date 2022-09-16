@@ -51,14 +51,16 @@
         <label for="Message">Message</label>
         <textarea v-model="message" type="textarea" id="subject" name="subject" placeholder="Please enter your message" style="height:200px"></textarea>
     
-        <input type="submit" value="Submit"/>
+        <input onclick="showAlert()" type="submit" value="Submit"/>
 
-        <template>
-          <button @click="sent = !sent">toggle</button>
-        
-          <h1 v-if="sent"></h1>
-          <h1 v-else>Message Sent!</h1>
-        </template>
+        <script>
+            function showAlert()
+            {
+                alert("Message Sent")
+                var heading3 = document.getElementById("heading3");
+  
+            }
+        </script>
 
       </div>
     </body>
@@ -66,4 +68,4 @@
     <footer>
     </footer>
 </html>
-<script src="./script.js"></script>
+<script src="./main.js"></script>

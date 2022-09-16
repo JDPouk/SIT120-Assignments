@@ -33,12 +33,14 @@
       </div>
     </div>
     <body>
+      <div id="app2">
       <div class="flex-container">
         <div id="flex-item-left" >
           <h2 id="jumpAnchor0">Australian income tax calculator</h2><h3>Your income</h3>
           <p>
           <label for="grossIncome">Employment income: <span>(after salary sacrifice, before tax)</span></label>
-          <input type="text" inputmode="numeric" id="grossIncome" class="dollars" value="0">
+            <input v-model="message" type="text" inputmode="numeric" id="grossIncome" class="dollars" value="0">
+
           <label for="grossIncomeFreq" class="offScreen">Employment income frequency</label>
           <select id="grossIncomeFreq" class="freq">
           <option value="1">Annually</option>
@@ -77,16 +79,20 @@
           <div id="incomeTaxResultsContainer" >
             <div id="calc_box_top">
             <p id="tax_text" >Enter an income to view the result</p>
+
+                <p >Message is: {{ message }}</p>
+            </div>
+
             </div>
           </div>
 
       </div>
 
-    </body>
+    </body>   
     <footer>
     </footer>
 </html>
-<script src="./script.js"></script>
+<script src="./main.js"></script>
 <script setup>
   import { ref } from "vue";
   let input = ref("");
