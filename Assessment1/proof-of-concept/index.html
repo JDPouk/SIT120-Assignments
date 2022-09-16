@@ -25,16 +25,8 @@
     </div>
     <body>
       
-      <div id="example-1">
-        <button @click="show = !show">
-          Toggle render
-        </button>
-        <transition name="slide-fade">
-          <p v-if="show">hello</p>
-        </transition>
-      </div>
 
-      <Transition name="slide-fade" v-show="!ok">
+      <transition name="slide-fade" v-show="!ok">
       <div class="card-list">
         <a href="about.html">
       <div class="card">
@@ -57,7 +49,7 @@
       </div>
         </a>
     </div>
-  </Transition>
+  </transition>
     </body>
 
     <footer>

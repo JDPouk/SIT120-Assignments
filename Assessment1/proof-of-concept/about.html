@@ -20,15 +20,7 @@
         <form action="/action_page.php">
           <input type="text" placeholder="Search.." name="search">
           <button type="submit"><i class="fa fa-search"></i></button>
-          <template>
-            <input type="text" v-model="input" placeholder="Search fruits..." />
-           <div class="item fruit" v-for="fruit in filteredList()" :key="fruit">
-             <p>{{ fruit }}</p>
-           </div>
-           <div class="item error" v-if="input&&!filteredList().length">
-              <p>No results found!</p>
-           </div>
-         </template>
+    
         </form>
       </div>
     </div>
