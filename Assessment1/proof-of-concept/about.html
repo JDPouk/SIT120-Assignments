@@ -39,7 +39,7 @@
           <h2 id="jumpAnchor0">Australian income tax calculator</h2><h3>Your income</h3>
           <p>
           <label for="grossIncome">Employment income: <span>(after salary sacrifice, before tax)</span></label>
-            <input v-model="message" type="text" inputmode="numeric" id="grossIncome" class="dollars" value="0">
+            <input v-model="grossIncome" type="text" inputmode="numeric" id="grossIncome" class="dollars" value="0">
 
           <label for="grossIncomeFreq" class="offScreen">Employment income frequency</label>
           <select id="grossIncomeFreq" class="freq">
@@ -51,7 +51,7 @@
           </p>
           <p>
           <label for="otherIncome">Other taxable income:</label>
-          <input type="text" inputmode="numeric" id="otherIncome" class="dollars" value="0">
+          <input v-model="otherIncome" type="text" inputmode="numeric" id="otherIncome" class="dollars" value="0">
           <label for="otherIncomeFreq" class="offScreen">Other taxable income frequency</label>
           <select id="otherIncomeFreq" class="freq">
           <option value="1">Annually</option>
@@ -72,15 +72,15 @@
           <option value="2022-2023" selected="">2022-2023</option>
           </select>
           </p>
-          <p class="col100 hide">
-          <button id="btnCalculate">Calculate</button>
-          </p>
+  
           </div>  
           <div id="incomeTaxResultsContainer" >
             <div id="calc_box_top">
             <p id="tax_text" >Enter an income to view the result</p>
-
-                <p >Message is: {{ message }}</p>
+                <p v-if="grossIncome" >Your taxable income: ${{ result }}</p>
+                <slot>
+                  <p v-else-if="otherIncome" >Your taxable income: ${{ result }}</p>
+                </slot>
             </div>
 
             </div>

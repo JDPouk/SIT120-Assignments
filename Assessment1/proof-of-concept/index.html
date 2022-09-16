@@ -24,6 +24,17 @@
       </div>
     </div>
     <body>
+      
+      <div id="example-1">
+        <button @click="show = !show">
+          Toggle render
+        </button>
+        <transition name="slide-fade">
+          <p v-if="show">hello</p>
+        </transition>
+      </div>
+
+      <Transition name="slide-fade" v-show="!ok">
       <div class="card-list">
         <a href="about.html">
       <div class="card">
@@ -34,7 +45,7 @@
         </div>
       </div>
         </a>
-      
+
         <a href="contact.html">
       <div class="card">
         <img src="images/chat.svg" alt="Avatar" style="width:50%;height:50%;">
@@ -46,6 +57,7 @@
       </div>
         </a>
     </div>
+  </Transition>
     </body>
 
     <footer>
