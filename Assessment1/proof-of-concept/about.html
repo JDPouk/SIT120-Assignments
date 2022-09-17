@@ -30,8 +30,10 @@
         <div id="flex-item-left" >
           <h2 id="jumpAnchor0">Australian income tax calculator</h2><h3>Your income</h3>
           <p>
+        
+          <!-- grossIncome varible input field -->
           <label for="grossIncome">Employment income: <span>(after salary sacrifice, before tax)</span></label>
-            <input v-model="grossIncome" type="text" inputmode="numeric" id="grossIncome" class="dollars" value="0">
+          <input v-model="grossIncome" type="text" inputmode="numeric" id="grossIncome" class="dollars" value="0">
 
           <label for="grossIncomeFreq" class="offScreen">Employment income frequency</label>
           <select id="grossIncomeFreq" class="freq">
@@ -42,8 +44,12 @@
           </select>
           </p>
           <p>
+          
+          <!-- otherIncome varible input field -->
           <label for="otherIncome">Other taxable income:</label>
           <input v-model="otherIncome" type="text" inputmode="numeric" id="otherIncome" class="dollars" value="0">
+
+          <!-- Frequency option selection -->
           <label for="otherIncomeFreq" class="offScreen">Other taxable income frequency</label>
           <select id="otherIncomeFreq" class="freq">
           <option value="1">Annually</option>
@@ -66,11 +72,15 @@
           </p>
   
           </div>  
+
+          <!-- Div container for the calculator function -->
           <div id="incomeTaxResultsContainer" >
             <div id="calc_box_top">
             <p id="tax_text" >Enter an income to view the result</p>
+                <!-- this paragraph gets displyed if the gross income field is not emptpy, shows to sum of all income -->
                 <p v-if="grossIncome" >Your taxable income: ${{ result }}</p>
                 <slot>
+                    <!-- this paragraph gets displyed if the  other income field is not emptpy, shows to sum of all income -->
                   <p v-else-if="otherIncome" >Your taxable income: ${{ result }}</p>
                 </slot>
             </div>
@@ -84,14 +94,5 @@
     <footer>
     </footer>
 </html>
+<!-- Link to scrpit file included in every page -->
 <script src="./main.js"></script>
-<script setup>
-  import { ref } from "vue";
-  let input = ref("");
-  const fruits = ["apple", "banana", "orange"];
-  function filteredList() {
-    return fruits.filter((fruit) =>
-      fruit.toLowerCase().includes(input.value.toLowerCase())
-    );
-  }
-  </script>
