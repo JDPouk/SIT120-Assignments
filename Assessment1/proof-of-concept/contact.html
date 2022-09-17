@@ -2,20 +2,23 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>
-        The Start of something
-        </title>
+        <title> Financial Planning Service</title>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
         <link rel="stylesheet" href="style.css">
     </head> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Navigation bar with links to each page-->
     <div class="topnav">
       <a class="active" href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
+
+       <!-- resposnce navigation bars for smaller screens-->
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars "></i>
       </a>
+
+      <!-- Search bar input for every page-->
       <div class="search-container">  
         <form action="/action_page.php">
           <input type="text" placeholder="Search.." name="search">
@@ -27,27 +30,24 @@
  
   
       <div id="app">
+      <!-- Vue app for the contact form-->
 
         <h1>Contact Us</h1>
-
+  
+        <!-- First name value used in vue app-->
         <label for="First Name">First Name</label>
-        <input 
-        v-model="firstName"
-        type="text" 
-        placeholder="Please enter your First Name" />
+        <input  v-model="firstName" type="text" placeholder="Please enter your First Name" />
+
+        <!-- Last  name value from the form used in vue app-->
         <label for="Last Name">Last Name</label>
+        <input  v-model="lastName" type="text"  placeholder="Please enter your Last Name" />
 
-        <input 
-        v-model="lastName"
-        type="text" 
-        placeholder="Please enter your Last Name" />
+
+        <!-- email value from the form used in vue app-->
         <label for="Email">Email</label>
+        <input v-model="email" type="text" placeholder="Please enter your email" />
 
-        <input 
-        v-model="email" 
-        type="text"  
-        placeholder="Please enter your email" />
-
+        <!-- Message value from the form used in vue app-->
         <label for="Message">Message</label>
         <textarea v-model="message" type="textarea" id="subject" name="subject" placeholder="Please enter your message" style="height:200px"></textarea>
     
@@ -56,7 +56,9 @@
         <script>
             function showAlert()
             {
+              // displays a meessage to the user in a box 
                 alert("Message Sent")
+                 // displays a meessage to the user in a box 
                 var heading3 = document.getElementById("heading3");
   
             }
