@@ -10,18 +10,20 @@ let vue = new Vue({
     // returns the sum of the income values
     result() {
      // checks to see if the value is an empty string
-      if((this.grossIncome.length !== 0 ) ){ 
-        // returns only the icome value with a integer
-        return parseInt(this.grossIncome)
+      if((this.grossIncome.length !== 0 && this.otherIncome.length !== 0) ){ 
+       // returns the sum of bother income types if they not empty
+        return parseInt(this.grossIncome) + parseInt(this.otherIncome)
       }
-      
       if(this.otherIncome.length !== 0 )
       {
          // returns only the icome value with a integer
         return parseInt(this.otherIncome)
       }
-      // returns the sum of bother income types if they not empty
-      else{return parseInt(this.grossIncome) + parseInt(this.otherIncome)}
+      if(this.grossIncome.length !== 0 )
+      {
+         // returns only the icome value with a integer
+         return parseInt(this.grossIncome)
+      }
     }
   }
 })

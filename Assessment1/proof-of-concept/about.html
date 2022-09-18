@@ -82,7 +82,9 @@
             <p id="tax_text" >Enter an income to view the result</p>
                 <!-- this paragraph gets displyed if the gross income field is not emptpy, shows to sum of all income -->
                 <p v-if="grossIncome" >Your taxable income: ${{ result }}</p>
-                <slot>
+                  <!-- this paragraph gets displyed if the  other income field is not emptpy, shows to sum of all income -->
+                <p v-else-if="otherIncome" >Your taxable income: ${{ result }}</p>
+                <slot >
                     <!-- this paragraph gets displyed if the  other income field is not emptpy, shows to sum of all income -->
                   <p v-else-if="otherIncome" >Your taxable income: ${{ result }}</p>
                 </slot>
