@@ -35,6 +35,15 @@ new Vue({
   }
 })
 
+new Vue({
+  // new Vue app
+  el: '#contact',
+  data: {
+    // props that cotains the income values entered by the user
+    firstName: "",
+  },
+})
+
 Vue.mixin({
   created: function showAlert()
   {
